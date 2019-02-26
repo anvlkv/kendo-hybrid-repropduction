@@ -16,10 +16,18 @@ var Shared;
           this.$scope = $scope;
 
           _this.$scope.comboBoxOptions = {
-            dataSource: [
-              'val1',
-              'val2'
-            ],
+            dataSource: {
+              data: [
+                'val1',
+                'val2'
+              ],
+              transport: {
+                read: function(e) {
+                  alert('reading');
+                  e.success(['val1', 'val2', 'val3', 'val4']);
+                }
+              }
+            },
             filter: 'contains',
             filtering: function(e) {
               alert(e.filter.value);
