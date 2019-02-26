@@ -2,7 +2,7 @@ var Shared;
 (function (Shared) {
   var FileImportOverlayComponent = (function () {
     function FileImportOverlayComponent() {
-        this.template = "<select kendo-combo-box k-options=\"comboBoxOptions\"></select>";
+        this.template = "<app-combo-wrapper [options]=\"comboBoxOptions\" [id]=\"some_id\"></app-combo-wrapper>";
         this.bindings = {
         };
         this.controller = FileImportOverlayController;
