@@ -2,7 +2,7 @@ var Shared;
 (function (Shared) {
   var FileImportOverlayComponent = (function () {
     function FileImportOverlayComponent() {
-        this.template = "<app-combo-wrapper [options]=\"comboBoxOptions\" [id]=\"some_id\"></app-combo-wrapper>";
+        this.template = "<h2>directly</h2><select kendo-combo-box k-options=\"comboBoxOptions\"></select><br><h2>wrapper</h2><app-combo-wrapper [options]=\"comboBoxOptions\" [id]=\"some_id\"></app-combo-wrapper>";
         this.bindings = {
         };
         this.controller = FileImportOverlayController;
@@ -19,7 +19,11 @@ var Shared;
             dataSource: [
               'val1',
               'val2'
-            ]
+            ],
+            filter: 'contains',
+            filtering: function(e) {
+              alert(e.filter.value);
+            }
           };
       }
       return FileImportOverlayController;
