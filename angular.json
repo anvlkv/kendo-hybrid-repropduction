@@ -30,7 +30,8 @@
             "scripts": [
               "./node_modules/jquery/dist/jquery.js",
               "./node_modules/angular/angular.js",
-              "src/vendor/kendo/kendo.all.js"
+              "src/vendor/kendo/jszip.min.js",
+              "src/vendor/kendo/kendo.all.min.js"
             ]
           },
           "configurations": {
@@ -85,7 +86,8 @@
             "scripts": [
               "./node_modules/jquery/dist/jquery.js",
               "./node_modules/angular/angular.js",
-              "src/vendor/kendo/kendo.all.js"
+              "src/vendor/kendo/jszip.min.js",
+              "src/vendor/kendo/kendo.all.min.js"
             ],
             "assets": [
               "src/favicon.ico",
